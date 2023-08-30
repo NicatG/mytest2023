@@ -48,4 +48,4 @@ Route::resource('devices',DevicesController::class);
 Route::get('/all-role',[RoleController::class,'allRole'])->name('allRole');
 Route::get('/create-role',[RoleController::class,'createRole'])->name('createRole');
 Route::post('/create-role',[RoleController::class,'createFormRole'])->name('createFormRole');
-echo"";
+
