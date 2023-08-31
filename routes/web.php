@@ -7,6 +7,7 @@ use App\Http\Controllers\PasswordReset;
 use App\Http\Controllers\ExcelImport;
 use App\Http\Controllers\DevicesController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\PhotoUploadController;
 use App\Http\Middleware\IsLogin;
 use App\Http\Middleware\NotLogin;
 
@@ -48,4 +49,5 @@ Route::resource('devices',DevicesController::class);
 Route::get('/all-role',[RoleController::class,'allRole'])->name('allRole');
 Route::get('/create-role',[RoleController::class,'createRole'])->name('createRole');
 Route::post('/create-role',[RoleController::class,'createFormRole'])->name('createFormRole');
-
+Route::get('/photo-upload',[PhotoUploadController::class,'uploadIndex'])->name('photo-upload-index');
+Route::post('/photo-upload',[PhotoUploadController::class,'upload'])->name('upload');
