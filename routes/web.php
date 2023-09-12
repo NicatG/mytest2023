@@ -10,6 +10,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PhotoUploadController;
 use App\Http\Middleware\IsLogin;
 use App\Http\Middleware\NotLogin;
+use App\Http\Controllers\TextEditorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,4 @@ Route::get('/create-role',[RoleController::class,'createRole'])->name('createRol
 Route::post('/create-role',[RoleController::class,'createFormRole'])->name('createFormRole');
 Route::get('/photo-upload',[PhotoUploadController::class,'uploadIndex'])->name('photo-upload-index');
 Route::post('/photo-upload',[PhotoUploadController::class,'upload'])->name('upload');
+Route::resource('txt',TextEditorController::class);
